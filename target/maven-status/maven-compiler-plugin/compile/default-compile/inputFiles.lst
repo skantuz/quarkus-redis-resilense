@@ -1,8 +1,0 @@
-/home/skantuz/recovered_home/redis-resilient-initial-ms/src/main/java/com/company/redis/api/CacheResource.java
-/home/skantuz/recovered_home/redis-resilient-initial-ms/src/main/java/com/company/redis/config/RedisResilienceConfig.java
-/home/skantuz/recovered_home/redis-resilient-initial-ms/src/main/java/com/company/redis/infrastructure/RedisHealthCheck.java
-/home/skantuz/recovered_home/redis-resilient-initial-ms/src/main/java/com/company/redis/infrastructure/RedisPoolManager.java
-/home/skantuz/recovered_home/redis-resilient-initial-ms/src/main/java/com/company/redis/infrastructure/ResetStatus.java
-/home/skantuz/recovered_home/redis-resilient-initial-ms/src/main/java/com/company/redis/service/CacheEntry.java
-/home/skantuz/recovered_home/redis-resilient-initial-ms/src/main/java/com/company/redis/service/CacheService.java
-/home/skantuz/recovered_home/redis-resilient-initial-ms/src/main/java/com/company/redis/service/CacheWriteResult.java
