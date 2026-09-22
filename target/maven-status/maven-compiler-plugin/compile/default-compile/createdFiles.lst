@@ -1,0 +1,16 @@
+com/company/redis/api/CacheResource$CachePayload.class
+com/company/redis/config/RedisResilienceConfig.class
+com/company/redis/api/CacheResource$ResetResponse.class
+com/company/redis/api/CacheResource$ErrorResponse.class
+com/company/redis/api/CacheResource.class
+com/company/redis/api/CacheResource$CacheResponse.class
+com/company/redis/service/CacheService$1.class
+com/company/redis/service/CacheService.class
+com/company/redis/infrastructure/ResetStatus.class
+com/company/redis/infrastructure/RedisPoolManager.class
+com/company/redis/api/CacheResource$CacheWriteResponse.class
+com/company/redis/api/CacheResource$ConnectionIdResponse.class
+com/company/redis/service/CacheEntry.class
+com/company/redis/infrastructure/RedisHealthCheck.class
+com/company/redis/service/CacheWriteResult.class
+com/company/redis/api/CacheResource$1.class

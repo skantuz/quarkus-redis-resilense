@@ -1,0 +1,38 @@
+services:
+  redis:
+    image: docker.io/library/redis:7.2-alpine
+    container_name: redis-resilient-initial
+    networks:
+      resilient-net:
+        aliases:
+          - redis-resilient
+    ports:
+      - "6379:6379"     # acceso directo a Redis
+    command: ["redis-server", "--appendonly", "no", "--save", ""]
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 2s
+      retries: 3
+    restart: unless-stopped
+
+  toxiproxy:
+    image: ghcr.io/shopify/toxiproxy:2.9.0
+    container_name: redis-toxiproxy-initial
+    networks:
+      - resilient-net
+    ports:
+      - "6380:6380"     # puerto proxiado para pruebas de caos y delays
+      - "8474:8474"     # API HTTP de control de ToxiProxy
+    volumes:
+      - ./toxiproxy/toxiproxy.json:/etc/toxiproxy/toxiproxy.json:ro
+    command: ["-host=0.0.0.0", "-config=/etc/toxiproxy/toxiproxy.json"]
+    depends_on:
+      redis:
+        condition: service_healthy
+    restart: unless-stopped
+
+networks:
+  resilient-net:
+    name: redis-resilient-initial-net
+    driver: bridge
